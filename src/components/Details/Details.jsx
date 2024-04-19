@@ -7,14 +7,14 @@ import useStyles from './styles.js';
 
 
 
-const Details = () => {
+const Details = ({ title }) => {
     const classes = useStyles();
   
   return (
    
        
-      <Card className={classes.income} >
-      <CardHeader title="Income" />
+    <Card className={title === 'Income' ? classes.income : classes.expense}>
+      <CardHeader title={title} />
       <CardContent>
         <Typography variant="h5">50rs</Typography>
           { /* <Doughnut data="DATA" />*/}
